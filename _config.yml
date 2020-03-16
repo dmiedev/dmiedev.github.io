@@ -1,0 +1,33 @@
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name
+    sort_by: year
+
+plugins:
+  - jemoji
+
+# Personal info
+name: Dmitry Egorov
+whoami: a junior software developer
+
+# Contact info
+email: egorovdima60@gmail.com
+github: dmiedev
+vk: id128951296
+facebook: 100028025677866

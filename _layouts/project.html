@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<section>
+	<header class="major">
+		<h2>{{ page.title }}</h2>
+	</header>
+	<h4>Created for {{ page.platform }} using {{ page.tool }} in {{ page.year }}.</h4>
+	{{ content }}
+	{% if page.file_name %}
+		<ul class="actions">
+			<li><a href="/downloads/{{ page.file_name }}" class="button">Download</a></li>
+		</ul>
+	{% endif %}
+</section>
+<section>
+  <h2>Screenshots</h2>
+  <div class="row">
+		{% assign project_name = page.url | remove: '/projects/' %}
+		{% assign images = site.static_files | where: "image", true | where_exp: "item", "item.path contains project_name" %}
+		{% for image in images %}
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="{{ image.path }}" class="image fit thumb"><img src="{{ image.path }}" /></a>
+				</article>
+		{% endfor %}
+  </div>
+</section>
+<section>
+	<ul class="actions">
+		<li><a href="/#projects" class="button">All Projects</a></li>
+	</ul>
+</section>

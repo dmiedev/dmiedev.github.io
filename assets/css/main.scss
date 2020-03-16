@@ -1,0 +1,64 @@
+---
+---
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/vendor';
+@import 'libs/breakpoints';
+@import 'libs/html-grid';
+@import 'fontawesome-all.min.css';
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
+
+/*
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+$size-header-width: 35%;
+$size-header-pad: 4em;
+
+// Breakpoints.
+
+	 @include breakpoints((
+	  xlarge:  ( 1281px,  1800px ),
+		large:   ( 981px,   1280px ),
+		medium:  ( 737px,   980px  ),
+		small:   ( 481px,   736px  ),
+		xsmall:  ( null,    480px  ),
+	));
+
+// Base.
+
+  @import 'base/reset';
+  @import 'base/page';
+  @import 'base/typography';
+
+// Components.
+
+  @import 'components/container';
+  @import 'components/row';
+  @import 'components/section';
+  @import 'components/form';
+  @import 'components/box';
+  @import 'components/icon';
+  @import 'components/image';
+  @import 'components/list';
+  @import 'components/icons';
+  @import 'components/actions';
+  @import 'components/table';
+  @import 'components/button';
+  @import 'components/work-item';
+
+// Layout.
+
+  @import 'layout/header';
+  @import 'layout/footer';
+  @import 'layout/main';
+  @import 'layout/poptrox';
+  @import 'layout/touch';
+  @import 'layout/xlarge';
+  @import 'layout/large';
+  @import 'layout/medium';
+  @import 'layout/small';
+  @import 'layout/xsmall';

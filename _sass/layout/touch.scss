@@ -1,0 +1,36 @@
+/*
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/* Touch */
+
+	body.is-touch {
+
+		.image {
+			&.thumb {
+				&:before {
+					opacity: 0.5 !important;
+				}
+
+				&:after {
+					display: none !important;
+				}
+			}
+		}
+
+		#header {
+			background-attachment:	scroll;
+			background-size:		auto, cover;
+		}
+
+		.poptrox-popup {
+			.nav-next,
+			.nav-previous,
+			.closer {
+				opacity: 1.0 !important;
+			}
+		}
+
+	}

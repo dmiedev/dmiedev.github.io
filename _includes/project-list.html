@@ -1,0 +1,13 @@
+<div class="row">
+  {% assign projects = site.projects | reverse %}
+  {% for project in projects %}
+    {% assign name = project.url | remove: '/projects/' %}
+    {% assign image = site.static_files | where: "image", true | where_exp: "item", "item.path contains name" | first %}
+    <article class="col-{{ include.col }} col-{{ include.col | times: 2 }}-xsmall work-item">
+      <a href="{{ project.url }}" class="image fit thumb"><img src="{{ image.path }}" alt="{{ project.title }}" /></a>
+      <h3>{{ project.title }}</h3>
+      <p>{{ project.platform }} | {{ project.year }}</p>
+      <p>{{ project.excerpt }}</p>
+    </article>
+  {% endfor %}
+</div>
