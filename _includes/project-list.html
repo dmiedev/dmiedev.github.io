@@ -1,5 +1,5 @@
 <div class="row">
-  {% assign projects = site.projects | reverse %}
+  {% assign projects = site.projects | sort: "year" | reverse %}
   {% for project in projects %}
     {% assign name = project.url | remove: '/projects/' %}
     {% assign image = site.static_files | where: "image", true | where_exp: "item", "item.path contains name" | first %}
