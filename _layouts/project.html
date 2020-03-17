@@ -1,11 +1,17 @@
 ---
 layout: default
 ---
+{% assign project_name = page.url | remove: '/projects/' %}
+{% assign images = site.static_files | where: "image", true | where_exp: "item", "item.path contains project_name" %}
 <section>
 	<header class="major">
 		<h2>{{ page.title }}</h2>
 	</header>
 	<h4>Created for {{ page.platform }} using {{ page.tool }} in {{ page.year }}.</h4>
+	{% assign thumb = images | where_exp: "item", "item.path contains 'thumb'" | first %}
+	<article class="work-item">
+		<a href="{{ thumb.path }}" class="image fit thumb"><img src="{{ thumb.path }}" /></a>
+	</article>
 	{{ content }}
 	{% if page.file_name %}
 		<ul class="actions">
@@ -16,8 +22,6 @@ layout: default
 <section>
   <h2>Screenshots</h2>
   <div class="row">
-		{% assign project_name = page.url | remove: '/projects/' %}
-		{% assign images = site.static_files | where: "image", true | where_exp: "item", "item.path contains project_name" %}
 		{% for image in images %}
 			{% unless image.path contains 'thumb' %}
 				<article class="col-6 col-12-xsmall work-item">
