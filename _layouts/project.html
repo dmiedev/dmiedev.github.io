@@ -19,9 +19,11 @@ layout: default
 		{% assign project_name = page.url | remove: '/projects/' %}
 		{% assign images = site.static_files | where: "image", true | where_exp: "item", "item.path contains project_name" %}
 		{% for image in images %}
+			{% unless image.path contains 'thumb' %}
 				<article class="col-6 col-12-xsmall work-item">
 					<a href="{{ image.path }}" class="image fit thumb"><img src="{{ image.path }}" /></a>
 				</article>
+			{% endunless %}
 		{% endfor %}
   </div>
 </section>
