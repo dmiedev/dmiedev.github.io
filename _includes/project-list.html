@@ -1,8 +1,8 @@
 <div class="row">
-  <!-- Group projects by years -->
+  {% comment %} Group projects by years {% endcomment %}
   {% assign project_years = site.projects | group_by: "year" | sort: "name" | reverse %}
   {% for year in project_years %}
-    <!-- Sort projects of some year by month -->
+    {% comment %} Sort projects of some year by month {% endcomment %}
     {% assign sorted_projects = year.items | sort: "month" | reverse %}
     {% for project in sorted_projects %}
       {% assign name = project.url | remove: '/projects/' %}
