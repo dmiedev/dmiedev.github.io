@@ -21,7 +21,7 @@ My most distinguishing feature is the ability to reflect, deeply analyze, and tr
 
 <section markdown="1">
 
-## My awesome attributes
+## My Awesome Attributes
 
 **What I am like:** 
 - hard-working
@@ -49,7 +49,7 @@ My most distinguishing feature is the ability to reflect, deeply analyze, and tr
 - knowledge of effective learning concepts
 - Adobe Photoshop
 
-## My favorite activities
+## My Favorite Activities
 - Developing software 
 - Listening to music 
 - Playing video games 
